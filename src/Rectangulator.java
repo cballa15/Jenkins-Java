@@ -10,5 +10,6 @@ public class Rectangulator {
         System.out.println(output);
     }
 
+    // Test
     
 }
