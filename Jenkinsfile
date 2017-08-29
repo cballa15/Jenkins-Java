@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     options {
-        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '1'))
+        buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '1'))
     }
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
                 junit 'reports/result.xml'
             }
         }
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'ant -f build.xml -v'
             }
