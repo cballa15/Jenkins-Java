@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps{
-                //sh 'scp dist/rectangle_${env.BUILD_NUMBER}.jar root@tweakydragon051.mylabserver.com:/web/all'
+                sh 'scp dist/rectangle_${env.BUILD_NUMBER}.jar root@tweakydragon051.mylabserver.com:/web/all'
                 sh 'id -u -n'
             }
         }
