@@ -17,12 +17,12 @@ pipeline {
                 sh 'ant -f build.xml -v'
             }
         }
-        stage('Deploy') {
-            steps{
-                sh 'scp dist/rectangle_${env.BUILD_NUMBER}.jar root@tweakydragon051.mylabserver.com:/web/all'
-                sh 'id -u -n'
-            }
-        }
+        // stage('Deploy') {
+        //     steps{
+        //         sh 'scp dist/rectangle_${env.BUILD_NUMBER}.jar root@tweakydragon051.mylabserver.com:/web/all'
+        //         sh 'id -u -n'
+        //     }
+        // }
 
     }
 
